@@ -1,3 +1,3 @@
 #!bin/sh
-echo $1
-nohup java -jar $1 > /root/pipeline.log 2>&1 &
+cd ~
+nohup java -jar demo-0.0.1-SNAPSHOT.jar > /root/pipeline.log 2>&1 &
