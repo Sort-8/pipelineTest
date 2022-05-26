@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * @Author: panghai
  * @Date: 2022/05/10/22:50
@@ -23,5 +25,10 @@ public class UserController {
     @GetMapping("/getOneUser")
     public User getOnUser(@RequestParam("id") long id){
         return userService.getOneUser(id);
+    }
+
+    @GetMapping("/list")
+    public List<User> listOnUser(User user){
+        return userService.selectUserList(user);
     }
 }
