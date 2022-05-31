@@ -27,7 +27,7 @@ public class UserController {
         return userService.getOneUser(id);
     }
 
-    @GetMapping("/listUsers")
+    @GetMapping("/list")
     public List<User> listOnUser(User user){
         return userService.selectUserList(user);
     }
